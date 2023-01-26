@@ -35,7 +35,7 @@ Lets say we have the following POST endpoint which will send us a user json stri
 
 ```java
 app.post("/user", ctx -> {
-
+    
 });
 ```
 
