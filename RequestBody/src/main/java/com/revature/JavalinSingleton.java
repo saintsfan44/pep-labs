@@ -36,6 +36,16 @@ public class JavalinSingleton {
          */
         app.post("/problem2", ctx -> {
                //implement logic here
+               String jsonString = ctx.body();
+
+                ObjectMapper om = new ObjectMapper();
+                Song song = om.readValue(jsonString, Song.class);
+
+               ctx.contentType("application/json");
+
+               song.setArtistName("Beatles");
+
+               
         });
 
 
