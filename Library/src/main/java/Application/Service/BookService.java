@@ -51,7 +51,9 @@ public class BookService {
      * key was already in use.)
      */
     public Book addBook(Book book) {
-        
+        if(book.getIsbn()){
+            return bookDAO.insertBook(book);
+        }
         return null;
     }
     /**
